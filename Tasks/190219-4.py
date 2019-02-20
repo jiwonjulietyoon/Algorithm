@@ -5,6 +5,40 @@ for T in range(int(input())):
     N = int(input())
     arr = [list(map(int, input().split())) for _ in range(N)]
 
+    
+
+    print(f"#{T+1} {arr}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##########################################################################
+
+
+for T in range(int(input())):
+    N = int(input())
+    arr = [list(map(int, input().split())) for _ in range(N)]
+
     idx = [0] * N    # record selected columns (index number)
     sel = [0] * N    # record selected numbers from each row
 
