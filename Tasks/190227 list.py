@@ -39,12 +39,16 @@ class Node:
     def __init__(self, data, next=None):
         self.data = data
         self.next = next
+
     def getData(self):
         return self.data
+
     def setData(self, val):
         self.data = val
+
     def getNext(self):
         return self.next
+
     def setNext(self, val):
         self.next = val
 
@@ -53,13 +57,16 @@ class LinkedList:
     def __init__(self, head=None):
         self.head = head
         self.size = 0
+
     def getSize(self):
         return self.size
+
     def addtoFirst(self, data):
         newNode = Node(data, self.head)
         self.head = newNode
         self.size += 1
         return f"{newNode.data} prepended"
+
     def addtoLast(self, data):
         newNode = Node(data)
         if self.head == None:
@@ -71,17 +78,48 @@ class LinkedList:
             p.next = newNode
         self.size += 1
         return f"{newNode.data} appended"
-    def add(self, pre, data): # add (new) 'data' after 'pre'
-        # need to convert 'pre' into an actual member object of the particular LinkedList object
-        # at the moment, 'pre' is simply an 'int' or 'str' type (or whatever other data type inputted)
-        #    (AttributeError: 'str' object has no attribute 'next')
-        newNode = Node(data, pre.next)
-        if pre == None:
-            return 'Error'
-        else:
-            pre.next = newNode
+
+    def add(self, pre, data): # add 'data' after 'pre'
+        if self.head == None:
+            return "Error: List is empty"
+        curr = self.head
+        while curr:
+            if curr.data == pre:
+                newNode = Node(data, curr.next)
+                curr.next = newNode
+                self.size += 1
+                return f"{newNode.data} added after {curr.data}"
+            curr = curr.getNext()
+        return f"Error: Item '{pre}' not in list"
+
+    def insert(self, idx, data): # insert 'data' into specified index position
+        if type(idx) != int or idx < 0:
+            return f"Error: Inserting position must be an integer (0 or above)"
+        if idx == 0: # add as first item
+            newNode = Node(data, self.head)
+            self.head = newNode
             self.size += 1
-            return f"{data} added after {pre.data}"
+            return f"{newNode.data} inserted into position {idx}"
+        curr = self.head
+        cnt = 0
+        while curr:
+            if cnt + 1 == idx:
+                newNode = Node(data, curr.next)
+                curr.next = newNode
+                self.size += 1
+                return f"{newNode.data} inserted into position {idx}"
+            curr = curr.getNext()
+            cnt += 1
+        return f"Error: Position index out of range"
+
+    def delete(self, item): # unfinished
+        if self.head.data == item: # if item is first in list (linked to head)
+            self.head 
+        curr = self.head
+        while curr:
+            if curr.data == item:
+
+
     def printNode(self):
         curr = self.head
         while curr:
@@ -110,6 +148,19 @@ print("<<Printing>>")
 myList.printNode()
 print("<<Inserting>>")
 print(myList.add('A', 'AA'))
+print(myList.add('BBB', 'BB'))
+print(myList.insert(0, 'tmp'))
+
+print("<<Printing>>")
+myList.printNode()
+print("<<Size>>")
+print(myList.getSize())
+
+print("<<Inserting>>")
+print(myList.insert(3, 'Z'))
+
+print("<<Printing>>")
+myList.printNode()
 print("<<Size>>")
 print(myList.getSize())
 
