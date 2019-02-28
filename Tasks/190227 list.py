@@ -112,19 +112,28 @@ class LinkedList:
             cnt += 1
         return f"Error: Position index out of range"
 
-    def delete(self, item): # unfinished
-        if self.head.data == item: # if item is first in list (linked to head)
-            self.head 
-        curr = self.head
-        while curr:
-            if curr.data == item:
-
+    # def delete(self, item): # unfinished
+    #     if self.head.data == item: # if item is first in list (linked to head)
+    #         self.head
+    #     curr = self.head
+    #     while curr:
+    #         if curr.data == item:
 
     def printNode(self):
         curr = self.head
         while curr:
             print(curr.data)
             curr = curr.getNext()
+
+    def getNode(self, idx): # get node of given index position
+        curr = self.head
+        cnt = 0
+        while curr:
+            if cnt == idx:
+                return curr.data
+            curr = curr.getNext()
+            cnt += 1
+        return "Error: Position out of range"
 
 
 # node1 = Node('A')
@@ -163,6 +172,57 @@ print("<<Printing>>")
 myList.printNode()
 print("<<Size>>")
 print(myList.getSize())
+
+print("======================")
+print(myList.getNode(5))
+
+################################################################
+
+##### Doubly Linked List (working)
+
+# data, next, prev, head, tail
+
+class Node:
+    def __init__(self, data, prev=None, next=None):
+        self.data = data
+        self.prev = prev
+        self.next = next
+    def getPrev(self):
+        return self.prev
+    def getNext(self):
+        return self.next
+
+class DoublyLinkedList:
+    def __init__(self, head=None, tail=None):
+        self.head = head
+        self.tail = tail
+    def insert(self, idx, data):
+        if self.head == None: # empty list, insert as first item
+            newNode = Node(data)
+            self.head = newNode
+            self.tail = newNode
+            return f"{data} inserted as first item"
+        if idx == 0: # list has at least one item & insert as first item
+            newNode = Node(data, None, self.head)
+            self.head.prev = newNode
+            self.head = newNode
+            return f"{data} inserted as first item"
+        curr = self.head
+        cnt = 0
+        while curr:
+            if cnt + 1 == idx and curr.getNext() == None: # insert as last item of list
+                newNode = Node(data, curr)
+                curr.next = newNode
+                self.tail = newNode
+                return f"{data} inserted as last item"
+            if cnt + 1 == idx: # insert after curr
+                newNode = Node(data, curr, curr.next)
+                curr.next.prev = newNode
+                curr.next = newNode
+                return f"{data} inserted into position {idx}"
+            curr = curr.getNext()
+        return f"Error: Position index out of range"
+
 
 ##################################################################################
 
