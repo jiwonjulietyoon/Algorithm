@@ -32,8 +32,13 @@ def delete(pre): # delete node following 'pre'
 
 
 
-#####################################
-# Singly Linked List tmp
+#################################################
+################################################
+
+
+
+
+# Singly Linked List
 
 class Node:
     def __init__(self, data, next=None):
@@ -110,20 +115,32 @@ class LinkedList:
                 return f"{newNode.data} inserted into position {idx}"
             curr = curr.getNext()
             cnt += 1
-        return f"Error: Position index out of range"
+        return "Error: Position index out of range"
 
-    # def delete(self, item): # unfinished
-    #     if self.head.data == item: # if item is first in list (linked to head)
-    #         self.head
-    #     curr = self.head
-    #     while curr:
-    #         if curr.data == item:
+    def delete(self, idx): # delete item in given index position
+        if type(idx) != int or idx < 0:
+            return f"Error: Position must be an integer (0 or above)"
+        if idx == 0: # delete first item
+            self.head = self.head.next
+            self.size -= 1
+            return f"Item in position {idx} deleted"
+        curr = self.head
+        cnt = 0
+        while curr:
+            if cnt + 1 == idx:
+                curr.next = curr.next.next
+                self.size -= 1
+                return f"Item in position {idx} deleted"
+            curr = curr.getNext()
+        return "Error: Position index out of range"
 
     def printNode(self):
+        nodes = []
         curr = self.head
         while curr:
-            print(curr.data)
+            nodes.append(curr.data)
             curr = curr.getNext()
+        return nodes
 
     def getNode(self, idx): # get node of given index position
         curr = self.head
@@ -133,7 +150,7 @@ class LinkedList:
                 return curr.data
             curr = curr.getNext()
             cnt += 1
-        return "Error: Position out of range"
+        return "Error: Position index out of range"
 
 
 # node1 = Node('A')
@@ -154,14 +171,14 @@ print(myList.addtoLast('A'))
 print(myList.addtoLast('B'))
 print(myList.addtoLast('C'))
 print("<<Printing>>")
-myList.printNode()
+print(*myList.printNode())
 print("<<Inserting>>")
 print(myList.add('A', 'AA'))
 print(myList.add('BBB', 'BB'))
 print(myList.insert(0, 'tmp'))
 
 print("<<Printing>>")
-myList.printNode()
+print(*myList.printNode())
 print("<<Size>>")
 print(myList.getSize())
 
@@ -169,14 +186,27 @@ print("<<Inserting>>")
 print(myList.insert(3, 'Z'))
 
 print("<<Printing>>")
-myList.printNode()
+print(*myList.printNode())
+print("<<Size>>")
+print(myList.getSize())
+print("===")
+print(myList.getNode(5))
+
+print("<<Deleting>>")
+print(myList.delete(1))
+print(myList.delete(0))
+print(myList.delete(20))
+
+print("<<Printing>>")
+print(*myList.printNode())
 print("<<Size>>")
 print(myList.getSize())
 
-print("======================")
-print(myList.getNode(5))
 
+
+###############################################################
 ################################################################
+
 
 ##### Doubly Linked List (working)
 
@@ -224,7 +254,11 @@ class DoublyLinkedList:
         return f"Error: Position index out of range"
 
 
+
+################################################################
 ##################################################################################
+
+
 
 # MERGE SORT
 
