@@ -132,6 +132,7 @@ class LinkedList:
                 self.size -= 1
                 return f"Item in position {idx} deleted"
             curr = curr.getNext()
+            cnt += 1
         return "Error: Position index out of range"
 
     def printNode(self):
@@ -250,8 +251,36 @@ class DoublyLinkedList:
                 curr.next.prev = newNode
                 curr.next = newNode
                 return f"{data} inserted into position {idx}"
+            cnt += 1
             curr = curr.getNext()
         return f"Error: Position index out of range"
+    def getAllNodes(self):
+        nodes = []
+        curr = self.head
+        while curr:
+            nodes.append(curr.data)
+            curr = curr.getNext()
+        return nodes
+    def popLast(self):
+        curr = self.tail
+        last = curr.data
+        curr.prev.next = None
+        self.tail = curr.prev
+        return last
+
+
+myList = DoublyLinkedList()
+print(myList.insert(0, 'A'))
+print(myList.insert(1, 'B'))
+
+
+
+
+print(myList.insert(2, 'C'))
+print(myList.getAllNodes())
+print(myList.popLast())
+print(myList.getAllNodes())
+print(myList.head.data, myList.tail.data)
 
 
 
