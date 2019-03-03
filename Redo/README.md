@@ -13,19 +13,19 @@
 3. String
     - Pattern Matching
     - Palindrome
-4. Stack1
+4. Stack1 0211, 0212
     - Stack & Top
     - Memoization
     - Dynamic Programming (DP)
     - Depth First Search (DFS)
-5. Stack2
+5. Stack2 0218, 0219
     - DFS + Recursive
     - Backtracking & Pruning
-6. Queue
+6. Queue 0225, 0226
     - Queue & Front, Rear
     - Linear/Circular Queue
     - Breadth First Search (BFS)
-7. Linked List
+7. Linked List 0227, 0228
     - Singly Linked List
     - Doubly Linked List
     - Merge Sort
