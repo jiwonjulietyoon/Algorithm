@@ -1,23 +1,75 @@
-input1 = '13'
-input2 = '1 2 1 3 2 4 3 5 3 6 4 7 5 8 5 9 6 10 6 11 7 12 11 13'
-# 전위 순회..
 
-def preorder(T):
+class newNode:
+    def __init__(self, data):
+        self.data = data
+        self.left = self.right = None
+
+# Function to insert nodes in level order
+def insertLevelOrder(T, i, n):
+    # Base case for recursion
+    global arr
+    if i < n:
+        T = newNode(arr[i])
+
+        # insert left child
+        T.left = insertLevelOrder(T.left, 2*i+1, n)
+
+        # insert right child
+        T.right = insertLevelOrder(T.right, 2*i+2, n)
+    return T
+
+
+def inOrder(T):
+    global num
     if T:
-        print("%d" % T, end=" ")
-        preorder(tree[T][0])
-        preorder(tree[T][1])
+        inOrder(T.left)
+        num.append(T.data)
+        inOrder(T.right)
 
-n = int(input1)
-tree = [[0] * 2 for _ in range(n+1)]
-templ = list(map(int, input2.split()))
 
-for i in range(len(templ) // 2):
-    par, ch = templ[i*2], templ[i*2+1]
-    if not tree[par][0]:
-        tree[par][0] = ch
-    else:
-        tree[par][1] = ch
+arr = list(range(1, 9))
+n = len(arr)
+T = insertLevelOrder(None, 0, n)
 
-preorder(1)
+num = []
+inOrder(T)
 
+print(num)
+
+
+
+
+
+
+
+##########################################################
+# class newNode:
+#     def __init__(self, data):
+#         self.data = data
+#         self.left = self.right = None
+#
+# # Function to insert nodes in level order
+# def insertLevelOrder(arr, T, i, n):
+#     # Base case for recursion
+#     if i < n:
+#         T = newNode(arr[i])
+#
+#         # insert left child
+#         T.left = insertLevelOrder(arr, T.left, 2*i+1, n)
+#
+#         # insert right child
+#         T.right = insertLevelOrder(arr, T.right, 2*i+2, n)
+#     return T
+#
+#
+# def inOrder(T):
+#     if T:
+#         inOrder(T.left)
+#         print(T.data, end=" ")
+#         inOrder(T.right)
+#
+#
+# arr = list(range(1, 9))
+# n = len(arr)
+# T = insertLevelOrder(arr, None, 0, n)
+# inOrder(T)
