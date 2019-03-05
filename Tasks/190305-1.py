@@ -16,7 +16,7 @@ for T in range(int(input())):
     E, N = map(int, input().split())
     tmp = list(map(int, input().split()))
 
-    tree = [ [0, 0] for _ in range(E+2)]
+    tree = [[0, 0] for _ in range(E+2)]
 
     for i in range(0, len(tmp), 2):
         a, b = tmp[i:i+2]

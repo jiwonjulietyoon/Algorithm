@@ -1,3 +1,6 @@
-list = [None] + [i for i in range(3)]
+N = 8
 
-print(None == 0)
+if 1 < N < 7:
+    print('T')
+else:
+    print("F")
