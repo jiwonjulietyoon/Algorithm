@@ -13,6 +13,7 @@ only move up, right, or left
 """
 
 
+
 for T in range(10):
     _ = input()
     arr = [ input().split() for _ in range(100) ]
