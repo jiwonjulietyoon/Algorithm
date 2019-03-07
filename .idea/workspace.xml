@@ -5,9 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/Algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Algorithm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Redo/4-0-ladder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Redo/4-0-ladder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWTestPrep/Input/tmp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SWTestPrep/Input/tmp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tasks/190307-4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tasks/190307-4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tasks/190308-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tasks/190308-1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tasks/190308-2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tasks/190308-2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,63 +14,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-928331965">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="23" />
-          <entry key="txt" value="10" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="23" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="py" value="6881" />
-          <entry key="txt" value="129" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="129" />
-          <entry key="Python" value="6881" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tasks/190308-2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <marker date="1551949197291" expanded="true" signature="150:779" ph="..." />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tasks/190308-1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="63" column="14" lean-forward="true" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
-              <folding>
-                <marker date="1551927298297" expanded="true" signature="964:1506" ph="..." />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -79,7 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SWEA_D3/4615 othello.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="120">
               <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="10" selection-end-column="47" />
             </state>
           </provider>
@@ -132,7 +90,6 @@
         <option value="$PROJECT_DIR$/Tasks/190308-3.py" />
         <option value="$PROJECT_DIR$/Input/input6109.txt" />
         <option value="$PROJECT_DIR$/Input/tmp.txt" />
-        <option value="$PROJECT_DIR$/Tasks/190308-1.py" />
         <option value="$PROJECT_DIR$/SWTestPrep/IM/10163_origami.py" />
         <option value="$PROJECT_DIR$/SWTestPrep/Input/10163.txt" />
         <option value="$PROJECT_DIR$/SWTestPrep/IM/10163_coloredPaper.py" />
@@ -140,13 +97,15 @@
         <option value="$PROJECT_DIR$/SWTestPrep/IM/2606_virus.py" />
         <option value="$PROJECT_DIR$/SWTestPrep/Input/tmp.txt" />
         <option value="$PROJECT_DIR$/Tasks/190308-2.py" />
+        <option value="$PROJECT_DIR$/Tasks/190308-1.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-12" />
+    <option name="x" value="439" />
+    <option name="y" value="23" />
     <option name="width" value="1244" />
-    <option name="height" value="1047" />
+    <option name="height" value="945" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -156,7 +115,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,6 +136,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,7 +163,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.190308-2">
+  <component name="RunManager" selected="Python.190308-1">
     <configuration name="10163_coloredPaper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -319,10 +278,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.190308-1" />
         <item itemvalue="Python.190308-2" />
         <item itemvalue="Python.2606_virus" />
         <item itemvalue="Python.10163_coloredPaper" />
-        <item itemvalue="Python.190308-1" />
         <item itemvalue="Python.190308-3" />
       </list>
     </recent_temporary>
@@ -341,9 +300,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="0" width="1244" height="1047" extended-state="0" />
+    <frame x="439" y="23" width="1244" height="945" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16131757" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1638935" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
@@ -359,7 +319,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Run" order="3" weight="0.20692568" />
+      <window_info anchor="right" id="Run" order="3" weight="0.20632279" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17799352" />
@@ -380,9 +340,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info active="true" anchor="right" id="Run" order="3" visible="true" weight="0.25458467" />
     </layout-to-restore>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -615,9 +572,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SWTestPrep/IM/10163_origami.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SWTestPrep/IM/10163_origami.py" />
     <entry file="file://$PROJECT_DIR$/SWTestPrep/IM/2669_rectangleArea.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -670,36 +625,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <marker date="1551942560968" expanded="true" signature="100:362" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SWEA_D3/4615 othello.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="120">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tasks/190308-2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <marker date="1551949197291" expanded="true" signature="150:779" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tasks/190308-1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="63" column="14" lean-forward="true" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
-          <folding>
-            <marker date="1551927298297" expanded="true" signature="964:1506" ph="..." />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tasks/190308-2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
         </state>
       </provider>
     </entry>

@@ -12,12 +12,11 @@ def othello(color, opp, r, c): # color: disk color / opp: other color
                 break
             if arr[i][c] == color:
                 for k in range(r-1, i):
-
-
-
-
+                    arr[k][c] = color
+                break
     # NE
     if (r > 0 and c < N-1) and arr[r-1][c+1] == opp:
+        for i in range()
 
     # NW
     if (r > 0 and c > 0) and arr[r-1][c-1] == opp:

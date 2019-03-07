@@ -4,24 +4,24 @@ import sys
 sys.stdin = open('../Input/input6109.txt', 'r')
 
 def arr_reader(arr, N, d):
-    newarr = [[] for _ in range(N)]
+    new = [[] for _ in range(N)]
     for i in range(N):
-        tmp = []
+        z = []
         for j in range(N):
             if d == "left" or d == "right":
                 if arr[i][j]:
-                    newarr[i].append(arr[i][j])
+                    new[i].append(arr[i][j])
                 else:
-                    tmp.append(0)
+                    z.append(0)
             elif d == "up" or d == "down":
                 if arr[j][i]:
-                    newarr[i].append(arr[j][i])
+                    new[i].append(arr[j][i])
                 else:
-                    tmp.append(0)
+                    z.append(0)
         if d == "right" or d == "down":
-            newarr[i].reverse()
-        newarr[i] += tmp
-    return newarr
+            new[i].reverse()
+        new[i] += z
+    return new
 
 def swipe(arr, N):
     for row in arr:
@@ -45,9 +45,7 @@ def arr_writer(arr, N, d):
             for j in range(N):
                 final[i][j] = arr[j][N-1-i]
     elif d == "left":
-        for i in range(N):
-            for j in range(N):
-                final[i][j] = arr[i][j]
+        return arr
     elif d == "right":
         for i in range(N):
             for j in range(N):
