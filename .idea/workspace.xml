@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7bb1aa07-2e72-4dd9-8f41-75cfb6b6c5b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Algorithm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWTestPrep/IM/10163_coloredPaper.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWTestPrep/IM/10163_coloredPaper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWTestPrep/Input/10163.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SWTestPrep/Input/10163.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWTestPrep/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/SWTestPrep/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="7bb1aa07-2e72-4dd9-8f41-75cfb6b6c5b6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +12,7 @@
     <session id="-928331965">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -149,7 +143,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="1161" />
     <option name="height" value="1045" />
@@ -360,7 +354,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1161" height="1045" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13805631" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -378,7 +371,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Run" order="3" visible="true" weight="0.3369664" />
+      <window_info anchor="right" id="Run" order="3" weight="0.3369664" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17799352" />
