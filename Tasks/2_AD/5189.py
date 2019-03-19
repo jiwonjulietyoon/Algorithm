@@ -17,15 +17,23 @@ sys.stdin = open('../Input/5189.txt', 'r')
 def backtrack(p, c, Sum):  # current, previous
     global arr, N, Min, vis
     if 0 not in vis:
-        Sum += arr[c][1]
-        if
+        Sum += arr[c-1][0]
+        if Sum < Min:
+            Min = Sum
+    if Sum > Min:
+        return
     for i in range(2, N+1):
         if not vis[i]:
-            vis[i] = 1
             c = i
-            Sum += arr[p][c]
+            vis[c] = 1
+            Sum += arr[p-1][c-1]
             p = c
+            pp = p
             backtrack(p, c, Sum)
+            p = pp
+            c = p
+            Sum -= arr[p - 1][c - 1]
+            vis[i] = 0
 
 
 
