@@ -17,7 +17,8 @@ dr = [0, 1]
 dc = [1, 0]
 
 def backtrack(r, c, Sum):   # r, c: current row and column
-    global arr, N, Min
+    # global arr, N, Min
+    global Min
     if r == N-1 and c == N-1:
         if Sum < Min:
             Min = Sum
