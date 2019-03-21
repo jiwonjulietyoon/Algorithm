@@ -1,0 +1,24 @@
+# 5201. [파이썬 S/W 문제해결 구현] 3일차 - 컨테이너 운반
+
+import sys
+sys.stdin = open('../Input/5201.txt', 'r')
+
+
+"""
+eliminate any w greater than max(t)
+
+
+"""
+
+
+for T in range(int(input())):
+    N, M = map(int, input().split())
+    w = list(map(int, input().split()))   # weights of N containers
+    t = list(map(int, input().split()))   # capacity of M trucks
+    w.sort()
+    t.sort()
+
+    print(w)
+    print(t)
+    print()
+

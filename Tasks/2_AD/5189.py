@@ -15,23 +15,98 @@ import sys
 sys.stdin = open('../Input/5189.txt', 'r')
 
 
-def backtrack(p, c, Sum):  # current, previous
+def backtrack(p, c, Sum):
     global arr, N, Min, vis
-
+    if Sum > Min:
+        return
+    if 0 not in vis:
+        Sum += arr[c][0]
+        if Sum < Min:
+            Min = Sum
+    else:
+        for i in range(1, N):
+            if not vis[i]:
+                pp = p
+                p = c
+                c = i
+                Sum += arr[p][c]
+                vis[c] = 1
+                backtrack(p, c, Sum)
+                Sum -= arr[p][c]
+                vis[c] = 0
+                c = p
+                p = pp
 
 
 for T in range(int(input())):
     N = int(input())
     arr = [list(map(int, input().split())) for _ in range(N)]
-
     Min = 10000
-    vis = [0]*N
-    vis[0] = 1    # 사무실
+    vis = [0] * N
+    vis[0] = 1
 
-    for i in range(1, N):   # i: first destination
-        backtrack(1, i, 0)
-
+    backtrack(0, 0, 0)
     print(f"#{T+1} {Min}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+# def backtrack(p, c, Sum):  # current, previous
+#     global arr, N, Min, vis
+#     if Sum > Min:
+#         return
+#     if 0 not in vis:
+#         Sum += [c][0]
+#         print(Sum)
+#         if Sum < Min:
+#             Min = Sum
+#         return
+#     for i in range(1, N):
+#         if not vis[i]:
+#             vis[i] = 1
+#             pp, p, c = p, c, i
+#             Sum += arr[p][c]
+#             backtrack(p, c, Sum)
+#             Sum -= arr[p][c]
+#             p, c = pp, p
+#             vis[i] = 0
+#
+#
+#
+#
+# for T in range(int(input())):
+#     N = int(input())
+#     arr = [list(map(int, input().split())) for _ in range(N)]
+#
+#     Min = 10000
+#     vis = [0]*N
+#     vis[0] = 1    # 사무실
+#
+#     for i in range(1, N):   # i: first destination (#0 already taken)
+#         vis[i] = 1
+#         backtrack(0, i, arr[0][i])    # p: start at idx 0 (사무실)
+#         vis[i] = 0
+#
+#     print(f"#{T+1} {Min}")
 
 
 
