@@ -13,12 +13,23 @@ eliminate any w greater than max(t)
 
 for T in range(int(input())):
     N, M = map(int, input().split())
-    w = list(map(int, input().split()))   # weights of N containers
-    t = list(map(int, input().split()))   # capacity of M trucks
-    w.sort()
-    t.sort()
+    weights = list(map(int, input().split()))   # weights of N containers
+    trucks = list(map(int, input().split()))   # capacity of M trucks
+    weights.sort(reverse=True)
+    trucks.sort(reverse=True)
 
-    print(w)
-    print(t)
-    print()
+    total = 0
+
+    for w in weights:
+        for t in trucks:
+            if w <= t:
+                trucks.remove(t)
+                total += w
+                break
+
+    print(f"#{T+1} {total}")
+
+
+
+
 

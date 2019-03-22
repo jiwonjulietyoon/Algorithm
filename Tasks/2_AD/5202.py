@@ -5,32 +5,31 @@ sys.stdin = open('../Input/5202.txt', 'r')
 # sys.stdin = open('../Input/tmp.txt', 'r')
 
 """
-eliminating the least number of trucks as possible
 
-subset - start with max number of elements
 
 """
 
 
-def check(sub):
-    n = len(sub)
-    for i in range(n-1):
-        if sub[i][1] > sub[i+1][0]:
+def check(slot, hours): # return boolean
+    for i in range(slot[0], slot[1]):
+        if i not in hours:
             return 0
     return 1
 
 for T in range(int(input())):
     N = int(input())
-    time = [list(map(int, input().split())) for _ in range(N)]
-    time.sort(key=lambda x: x[1]-x[0])
+    slots = [list(map(int, input().split())) for _ in range(N)]
+    slots.sort(key=lambda x: x[1]-x[0])
 
-    print(time)
+    cnt = 0
+    hours = list(range(24))
+    for slot in slots:
+        if check(slot, hours):
+            for i in range(slot[0], slot[1]):
+                hours.remove(i)
+            cnt += 1
 
-    # for i in range(N):
-
-
-
-    # print(f"#{T+1} {N-i}")
+    print(f"#{T+1} {cnt}")
 
 
 
