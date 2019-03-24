@@ -18,18 +18,20 @@ def backtrack(c, Sum):
         if Sum < Min:
             Min = Sum  # replace record minimum
     else:  # need to charge
-
-
+        for i in range(1, M[c]+1):
+            c += i
+            Sum += 1
+            backtrack(c, Sum)
+            c -= i
+            Sum -= 1
 
 for T in range(int(input())):
     tmp = list(map(int, input().split()))
     N = tmp[0] - 1
     M = tmp[1:]
 
-    Min = N   # record minimum charges
-
+    Min = N
     backtrack(0, 0)
-
 
     print(f"#{T+1} {Min}")
 
