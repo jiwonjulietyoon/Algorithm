@@ -12,7 +12,8 @@ paper = [list(map(int, input().split())) for _ in range(N)]
 
 for x in paper:
     x.sort()
-paper.sort(key=lambda x: x[0]*x[1], reverse=True)
+# paper.sort(key=lambda x: x[0]*x[1], reverse=True)
+paper.sort(key=lambda x: (x[0], x[1]), reverse=True)
 print(*paper, sep="\n")
 
 print()
@@ -24,6 +25,11 @@ for i in range(N):  # for each paper
             count[i] += [j]
 print(*count, sep="\n")
 
+Max = 1  # at least one paper can be stacked
+
+for i in range(N):  # go through count
+    if i >= N-Max:
+        break
 
 
 
