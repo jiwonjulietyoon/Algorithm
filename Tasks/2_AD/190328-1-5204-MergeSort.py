@@ -1,37 +1,25 @@
 
 # 5204. [파이썬 S/W 문제해결 구현] 4일차 - 병합 정렬
 
-# Time out!
 
 
 import sys
 sys.stdin = open('../Input/5204.txt', 'r')
 
 
+"""
+실제 정렬하는 과정은 일반 sort() 내장함수를 사용하기
+(merge sort 하면 시간이 너무 오래 걸림)
+
+"""
+
+
 def merge(left, right):
     global cnt
     if left[-1] > right[-1]:
+        left[-1], right[-1] = right[-1], left[-1]
         cnt += 1
-
-    ll, lr = len(left), len(right)
-    res = [0] * (ll + lr)
-    l = r = i = 0  # idx
-    while l < ll and r < lr:  # while both lists each have at least 1 element
-        # compare each of the first elements; append smaller element to [result]
-        if left[l] <= right[r]:
-            res[i] = left[l]
-            l += 1
-        else:
-            res[i] = right[r]
-            r += 1
-        i += 1
-
-    if l < ll:  # if [left] has remaining elements
-        res[i:] = left[l:]
-    if r < lr:  # if [right] has remaining elements
-        res[i:] = right[r:]
-    return res
-
+    return left+right
 
 def merge_sort(m):
     if len(m) <= 1:
@@ -53,12 +41,18 @@ def merge_sort(m):
 for T in range(int(input())):
     N = int(input())
     m = list(map(int, input().split()))
+
     cnt = 0
-    print(f"#{T + 1} {merge_sort(m)[N//2]} {cnt}")
+    merge_sort(m)
+
+    m.sort()
+    print(f"#{T + 1} {m[N//2]} {cnt}")
+
+
 
 
 ############################################################################
-# TIme out 2
+# TIme out 2 : 실제로 소팅 과정에서 Merge Sort를 구현하면 시간 초과가 나온다.
 
 # def merge(left, right):
 #     global cnt

@@ -17,8 +17,7 @@ def solve(k, prod):
         for i in range(N):
             if not vis[i]:
                 vis[i] = 1
-                p = prod * arr[k][i]/100
-                solve(k+1, p)
+                solve(k+1, prod * arr[k][i]/100)
                 vis[i] = 0
 
 for T in range(int(input())):

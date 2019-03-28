@@ -26,6 +26,10 @@ def backtrack(p, c, Sum):
     else:
         for i in range(1, N):
             if not vis[i]:
+                # vis[i] = 1
+                # backtrack(c, i, Sum+arr[p][c])
+                # vis[i] = 0
+
                 pp = p
                 p = c
                 c = i
