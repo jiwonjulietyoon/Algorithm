@@ -10,29 +10,57 @@ p : power left
 
 """
 
+
 def backtrack(c, Sum):
-    global Min, M, N
+    global station, N, Min
     if Sum > Min:
         return
-    if M[c] >= N-c:  # goal reached
+    if station[c] >= N-1-c:
         if Sum < Min:
-            Min = Sum  # replace record minimum
-    else:  # need to charge
-        for i in range(1, M[c]+1):
-            c += i
-            Sum += 1
-            backtrack(c, Sum)
-            c -= i
-            Sum -= 1
+            Min = Sum
+    else:
+        for i in range(1, station[c]+1):
+            backtrack(c+i, Sum+1)
+
 
 for T in range(int(input())):
-    tmp = list(map(int, input().split()))
-    N = tmp[0] - 1
-    M = tmp[1:]
+    station = list(map(int, input().split()))
+    N = station[0]
+    station = station[1:]
 
     Min = N
     backtrack(0, 0)
-
     print(f"#{T+1} {Min}")
+
+
+
+
+
+
+
+# def backtrack(c, Sum):
+#     global Min, M, N
+#     if Sum > Min:
+#         return
+#     if M[c] >= N-c:  # goal reached
+#         if Sum < Min:
+#             Min = Sum  # replace record minimum
+#     else:  # need to charge
+#         for i in range(1, M[c]+1):
+#             c += i
+#             Sum += 1
+#             backtrack(c, Sum)
+#             c -= i
+#             Sum -= 1
+#
+# for T in range(int(input())):
+#     tmp = list(map(int, input().split()))
+#     N = tmp[0] - 1
+#     M = tmp[1:]
+#
+#     Min = N
+#     backtrack(0, 0)
+#
+#     print(f"#{T+1} {Min}")
 
 
