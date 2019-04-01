@@ -1,7 +1,7 @@
 
 
 
-print(sum(divmod(7, 4)))
+print(float("inf"))
 
 
 # def power_set_i():

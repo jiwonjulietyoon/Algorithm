@@ -1,32 +1,32 @@
 # 3074. 입국심사
 
 
-# Not finished
 
 import sys
+import time
 sys.stdin = open('../Input/3074.txt', 'r')
 
-
+st = time.time()
 
 
 TC = int(input())
 for T in range(1, TC+1):
     N, M = map(int, input().split())
 
-    time = [0]*N
+    times = [0]*N
     for i in range(N):
-        time[i] = int(input())
+        times[i] = int(input())
 
     # binary search
-    r = min(time) * M
-    l = 1
+    r = min(times) * M
+    l = min(times)
 
     while l < r:
         m = (l + r) // 2
 
         Sum = 0
         for i in range(N):
-            Sum += m//time[i]
+            Sum += m//times[i]
 
         if Sum < M:
             l = m + 1
@@ -35,6 +35,47 @@ for T in range(1, TC+1):
 
     print(f"#{T} {l}")
 
+print(time.time() - st)
+
+
+
+
+
+#
+# import sys
+# import time
+# sys.stdin = open('../Input/3074.txt', 'r')
+#
+# st = time.time()
+#
+#
+# TC = int(input())
+# for T in range(1, TC+1):
+#     N, M = map(int, input().split())
+#
+#     times = [0]*N
+#     for i in range(N):
+#         times[i] = int(input())
+#
+#     # binary search
+#     r = min(times) * M
+#     l = 1
+#
+#     while l < r:
+#         m = (l + r) // 2
+#
+#         Sum = 0
+#         for i in range(N):
+#             Sum += m//times[i]
+#
+#         if Sum < M:
+#             l = m + 1
+#         else:
+#             r = m
+#
+#     print(f"#{T} {l}")
+#
+# print(time.time() - st)
 
 
 

@@ -20,6 +20,7 @@ def merge(left, right):
         left[-1], right[-1] = right[-1], left[-1]
         cnt += 1
     return left+right
+    # try returning index numbers rather than the list itself!!
 
 def merge_sort(m):
     if len(m) <= 1:
