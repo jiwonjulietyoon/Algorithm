@@ -1,7 +1,63 @@
 
 
+# from itertools import permutations, combinations
+#
+# a = [1, 1, 2, 3]
+#
+# print(*set(list(combinations(a, 4))), sep='\n')
 
-print(float("inf"))
+a = '12345'
+
+b = [int(x) for x in a]
+
+print(b)
+
+
+
+# import sys
+# sys.stdin = open('../Input/5250.txt', 'r')
+#
+# INF = float('inf')
+#
+# # direction: 0up, 1right, 2down, 3left
+# dr = [-1, 0, 1, 0]
+# dc = [0, 1, 0, -1]
+#
+# def min_not_vis(vis, dis):
+#     i, j = -1, -1
+#     Min = INF
+#     for coor in vis:
+#         if dis[coor[0]][coor[1]] < Min:
+#             Min = dis[coor[0]][coor[1]]
+#             i, j = coor
+#     return i, j
+#
+# TC = int(input())
+# for T in range(1, TC+1):
+#     N = int(input())
+#     arr = [0]*N
+#     for i in range(N):
+#         arr[i] = list(map(int, input().split()))
+#     print(arr)
+#
+#     sel = [[0]*N for _ in range(N)]  # coordinates that have been visited at least once (dis != INF)
+#     cnt = 0  # count of calculated coordinates == len(cal)
+#     dis = [[INF]*N for _ in range(N)]
+#
+#     # start at top left corner
+#     dis[0][0] = 0
+#
+#     while cnt <= N*N:
+#         i, j = min_not_vis(vis, dis)   # row, col
+#         vis.append((i, j))
+#         cnt += 1
+#         print(i, j)
+#         for d in range(4):
+#             r, c = i+dr[d], j+dc[d]
+#             if 0 <= r < N and 0 <= c < N:
+#                 dis[r][c] = dis[i][j] + 1 + max(0, arr[r][c]-arr[i][j])
+#
+#     print(f"#{T} {dis[N-1][N-1]}")
 
 
 # def power_set_i():

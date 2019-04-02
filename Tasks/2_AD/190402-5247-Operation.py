@@ -1,14 +1,12 @@
 # 5247. [파이썬 S/W 문제해결 구현] 6일차 - 연산
 
 import sys
-# sys.stdin = open('../Input/5247.txt', 'r')
-sys.stdin = open('../Input/tmp.txt', 'r')
+sys.stdin = open('../Input/5247.txt', 'r')
+# sys.stdin = open('../Input/tmp.txt', 'r')
 
 """ +1, -1, *2, -10
 N => M
 """
-
-
 
 
 TC = int(input())
@@ -16,17 +14,19 @@ for T in range(1, TC+1):
     N, M = map(int, input().split())
 
     cnt = 0
+    vis = [0]*1000001
 
     q = [N]
     while 1:
         cnt += 1
-        tmp, q = q[:], []
+        tmp, q = q, []
         for num in tmp:
             new = [num-1, num+1, num*2, num-10]
             for x in new:
-                if 1 <= x <= 1000000:
+                if 1 <= x <= 1000000 and not vis[x]:
                     q.append(x)
-        q = list(set(q))
+                    vis[x] = 1
+        print(q)
         if M in q:
             break
 

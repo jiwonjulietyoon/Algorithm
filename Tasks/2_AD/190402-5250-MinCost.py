@@ -1,8 +1,50 @@
 
 # 5250. [파이썬 S/W 문제해결 구현] 7일차 - 최소 비용
 
+import heapq
 import sys
 sys.stdin = open('../Input/5250.txt', 'r')
+
+INF = float('inf')
+
+# direction: 0up, 1right, 2down, 3left
+dr = [-1, 0, 1, 0]
+dc = [0, 1, 0, -1]
+
+for T in range(1, int(input())+1):
+    N = int(input())
+    arr = [0]*N
+    cost = [0]*N
+    for i in range(N):
+        arr[i] = list(map(int, input().split()))
+        cost[i] = [INF]*N
+
+    # start at top left corner
+    cost[0][0] = 0
+    q = [(0, 0, 0)]  # weight, row, col
+
+    while q:
+        w, r, c = heapq.heappop(q)
+        cur = arr[r][c]
+
+        for d in range(4):
+            y, x = r+dr[d], c+dc[d]
+            if 0 <= y < N and 0 <= x < N:
+                new = arr[y][x]
+                cos = w + 1 + max(0, new-cur)
+                if cos < cost[y][x]:
+                    cost[y][x] = cos
+                    heapq.heappush(q, (cos, y, x))
+
+    print(f"#{T} {cost[N-1][N-1]}")
+
+
+
+
+
+
+
+
 
 
 
