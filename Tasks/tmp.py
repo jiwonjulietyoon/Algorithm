@@ -1,16 +1,43 @@
 
 
-# from itertools import permutations, combinations
+worm = [[[4, 8], [9, 2]], [[0, 8], [7, 6]], [], [], []]
+
+
+for w in worm[1]:
+    if 7 != w[0]:
+        break
+
+print(w)
+
+
+
+
+# K = 5
+# N = 2*K-1
 #
-# a = [1, 1, 2, 3]
+# arr = [[1]*N for _ in range(N)]
 #
-# print(*set(list(combinations(a, 4))), sep='\n')
+# arr[K-1] = [0]*N
+# for a in range(1, K):
+#     arr[K-1-a][a:N-a] = [0]*(N-2*a)
+#     arr[K - 1 + a][a:N - a] = [0] * (N - 2 * a)
+#
+# print(*arr, sep="\n")
 
-a = '12345'
 
-b = [int(x) for x in a]
 
-print(b)
+
+
+    # Sum = sum(arr[i][max(j - (K - 1), 0):min(j + (K - 1), N - 1) + 1])
+# for a in range(1, K):
+#         r_top, r_bot = i-a, i+a
+#         if r_top >= 0:
+#             Sum += sum(arr[r_top][max(j-(K-a-1), 0):min(j+(K-a-1), N-1)+1])
+#         if r_bot <= N-1:
+#             Sum += sum(arr[r_bot][max(j-(K-a-1), 0):min(j+(K-a-1), N-1)+1])
+
+
+
 
 
 
