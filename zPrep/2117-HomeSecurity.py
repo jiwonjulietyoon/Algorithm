@@ -12,6 +12,13 @@ cost_k = [0] + [k*k+(k-1)*(k-1) for k in range(1, 30)]
 print("cost_k:", cost_k)
 print()
 
+def count(i, j, K):
+    global Max
+
+
+
+
+
 for T in range(1, int(input())+1):
     print("=> Test Case", T)
     N, M = map(int, input().split())
@@ -30,7 +37,11 @@ for T in range(1, int(input())+1):
             break
     print("Max K:", e-1)
 
-
+    Max = 1
+    for K in range(e-1, 1, -1):
+        for i in range(N):
+            for j in range(N):
+                count(i, j, K)
 
 
 
