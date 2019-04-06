@@ -2,7 +2,18 @@
 
 from itertools import permutations
 
+# film = [[0, 0, 1, 0, 1, 0, 0, 1], [0, 1, 0, 0, 0, 1, 1, 1], [0, 1, 1, 1, 0, 0, 0, 0]]
+#
+# arrA = film[:]
+#
+# arrA[1] = [3]*8
+#
+# print(film)
+# print(arrA)
 
+
+
+print(1<<2)
 
 
 
